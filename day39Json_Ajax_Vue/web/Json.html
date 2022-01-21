@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //Json的定义
+        var jsonObj = {
+            "k1":10,     //number型
+            "k2":"abc",  //字符串型
+            "k3":true,   //Boolean型
+            "k4":[11,"arr",false],// 数组类型
+            "k5":{
+                "k5_1" : 123,
+                "k5_2" : "value"
+            },          //json对象型
+
+            //json数组
+            "k6": [{
+                "k6_1":110,
+                "k6_2":"value2"
+            },{
+               "k6_3":120,
+               "k6_4":"value4"
+            }]
+        }
+
+        // alert(typeof (jsonObj))//object   json就是一个对象
+        // alert(jsonObj.k1)
+        // alert(jsonObj.k2)
+        // alert(jsonObj.k3)
+        // alert(jsonObj.k4)
+        //json中数组的遍历
+        // for (var i = 0; i < jsonObj.k4.length; i++) {
+        //     alert(jsonObj.k4[i])
+        // }
+        // alert(jsonObj.k5)
+        // alert(jsonObj.k5.k5_1);
+        // alert(jsonObj.k5.k5_2);
+
+        // alert(jsonObj.k6)
+        var jsonItem = jsonObj.k6[0];
+        // alert(jsonItem.k6_1)
+        // alert(jsonItem.k6_2)
+        // alert(jsonItem.k6_3)//undefined
+        // alert(jsonItem.k6_4)//undefined
+
+        //把Json对象转换成Json字符串
+        var jsonObjectString = JSON.stringify(jsonObj);//和Java中的toString特别像
+        // alert(jsonObjectString)
+
+        //把json字符串转换成Json对象
+        var jsonObj2 = JSON.parse(jsonObjectString);
+        alert(jsonObj2.k1)
+        alert(jsonObj2.k2)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

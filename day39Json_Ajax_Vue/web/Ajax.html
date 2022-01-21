@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script type="text/javascript">
+        //1.通过js(JavaScript)语言发起Ajax请求,
+        function ajaxRequest() {
+           /*
+               method：请求的类型；GET 或 POST
+                url：文件在服务器上的位置
+                async：true（异步）或 false（同步）
+            */
+            //1.首先要创建XMLHttpRequest对象
+            var xmlHttpRequest = new XMLHttpRequest();
+
+            //2.调用open方法设置请求参数
+            xmlHttpRequest.open("GET","/ajaxServlet?action=javaScriptAjax",true);
+
+            //4.在send发送之前绑定一个onreadystatechange事件
+            xmlHttpRequest.onreadystatechange=function()
+            {
+                if (xmlHttpRequest.readyState==4 && xmlHttpRequest.status==200)
+                {
+                    alert("收到了服务器返回来的数据:" + xmlHttpRequest.responseText)
+                    var jsonObj = JSON.parse(xmlHttpRequest.responseText);
+                    //把响应的数据展示到页面上
+                    document.getElementById("div01").innerHTML = "编号" + jsonObj.id + ", 姓名:"+jsonObj.name
+                }
+            }
+
+            //3.调用send方法发送请求
+            xmlHttpRequest.send();
+
+            alert("去你**,臭**")
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="ajaxRequest()">ajax request</button>
+    <button onclick="ajaxRequest()">ajax request</button>
+    <button onclick="ajaxRequest()">ajax request</button>
+    <button onclick="ajaxRequest()">ajax request</button>
+    <div id="div01">
+    </div>
+</body>
+</html>

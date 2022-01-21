@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>用户登录</h1>
+    <form action="/logins" method="post">
+        姓名：<input type="text" name="username"/><br/>
+        密码：<input type="password" name="password"/><br/>
+        验证码:<input type="text" name="checkCode"><br>
+        <img src="checkCode" id="code"><a href="javascript:;" onclick="changeCheckCode()">换一换</a><br>
+        <input type="submit" value="登录"/>
+    </form>
+
+    <script>
+        //实现点击换一换，切换验证码图片
+        function changeCheckCode() {
+            //具体怎么去切换验证码呢? 也就是重新设置img标签的src
+            //如果直接设置src为"checkCode"的话，那么浏览器就会从缓存中获取验证码图片，所以我们要让浏览器避开缓存
+            //浏览器如果发现每次请求的路径不一样，就不会找缓存
+            document.getElementById("code").setAttribute("src","checkCode?date="+new Date())
+        }
+    </script>
+</center>
+</body>
+</html>
