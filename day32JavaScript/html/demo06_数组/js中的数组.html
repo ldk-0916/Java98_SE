@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中的数组</title>
+</head>
+<body>
+    <script>
+        /*
+           js中的创建数组的方式:
+                var arr = new arr[size]
+                var arr = new arr[e1,e2,e3...]
+                var arr = [e1,e2,e3...]  一般用这种
+            数组的特点:
+                    1.数组中的每个元素可以是任意类型
+                    2.数组的长度是可变的，更加类似于Java里的集合`List`
+
+         */
+        var arr1 = [1,2,3,"hello",true];
+        // console.log(arr1[0])//通过下标获取元素
+        var arr2 = ["q","w","e","r"];
+        //将arr1和arr2进行合并,合并成一个新的数组: concat():合并数组
+        var arr3 = arr1.concat(arr2);
+        // console.log(arr3.length)
+        //将数组中的元素拼接成一个字符串join,按指定分隔符分隔
+        // alert(arr3.join("#"))
+        //reverse():数组反转
+        // alert(arr3.reverse())
+
+        //二位数组
+        var students = new Array(3)
+        students[0] = ["张三","李四","刘思清"]
+        students[1] = ["zs","ls","lsq"]
+        students[2] = ["张小三","李小四","刘小清"]
+
+        var stu =[
+            ["张三","李四","刘思清"],
+            ["zs","ls","lsq"],
+            ["张小三","李小四","刘小清"]
+        ]
+        for (var i = 0; i < stu.length; i++) {
+            let stuArray = stu[i];
+            // alert()
+            for (var j = 0; j < stuArray.length ; j++) {
+                // alert(stuArray[i])
+                console.log(stuArray[j])
+            }
+        }
+
+    </script>
+</body>
+</html>

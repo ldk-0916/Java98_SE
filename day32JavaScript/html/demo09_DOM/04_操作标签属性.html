@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作标签体属性</title>
+</head>
+<body>
+    <input type="password" id="pwd">
+    <input type="button" value="显示密码" onmousedown="showPwd()" onmouseup="hidePwd()">
+    <script>
+        //点击显示密码的时候,就显示,松开就隐藏
+        function showPwd() {
+            //让密码框的密码展示:就是将输入框的type类型,变成text
+            document.getElementById("pwd").setAttribute("type","text")
+        }
+        function hidePwd() {
+            //隐藏就是将输入框的type变为password
+            document.getElementById("pwd").setAttribute("type","password")
+
+            //删除
+            document.getElementById("pwd").removeAttribute("type")
+        }
+
+    </script>
+</body>
+</html>

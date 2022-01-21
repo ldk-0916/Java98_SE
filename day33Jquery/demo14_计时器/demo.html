@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="time">
+
+    </div>
+
+    <input type="button" value="开始" onclick="startTime()">
+    <input type="button" value="暂停" onclick="pauseTime()">
+
+    <script>
+        //给开始按钮一个点击事件,点击之后,开始运行
+        var id = null;
+        function startTime() {
+            let time = new Date().toLocaleString();
+            $("#time").html(time)
+            //每次计时之前清除原来的
+            if (id != null){
+                clearInterval(id)
+            }
+            id = setInterval(function () {
+                let time = new Date().toLocaleString();
+                $("#time").html(time)
+            },1000)
+        }
+        //点击暂停按钮,
+        function pauseTime() {
+            //清除计时器
+            clearInterval(id)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js正则表达式</title>
+</head>
+<body>
+    <script>
+        //校验一个字符串是否有三个数字组成
+        var reg = /\d{3}///模糊匹配:只要被匹配的字符串有一段能够匹配上这个正则表达式
+        var reg1 = /^\d{3}$/ //:指定开头和结尾
+        var str = "123"
+        var str1 = "a123"
+        /*alert(reg.test(str));//true
+        alert(reg.test(str1));//true*/
+        alert(reg1.test(str))//true
+        alert(reg1.test(str1))//false
+    </script>
+</body>
+</html>

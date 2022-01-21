@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery的快速入门</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <script>
+        //需求: 等页面加载完成之后 获取输入框的value
+        //给当前window窗口绑定一个加载完毕事件
+      /*  window.onload = function () {
+            //窗体加载完就会执行这个匿名函数
+            //获取输入框value的值
+            var el = document.getElementById("d1");
+            let value = el.value;
+            alert(value)
+        }*/
+        //jquery也能绑定页面加载完毕事件  $就是用来代替window.onload
+        $(function () {
+            //获取输入框value的值
+            let el = document.getElementById("d1");
+            let value = el.value;
+            alert(value)
+        })
+    </script>
+    <input type="text" id="d1" value="张三"/>
+</body>
+</html>

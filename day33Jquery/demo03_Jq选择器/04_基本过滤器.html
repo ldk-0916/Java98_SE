@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<table id="tab1" border="1" width="800" align="center" >
+    <tr>
+        <td colspan="5"><input type="button" value="删除"></td>
+    </tr>
+    <tr style="background-color: #999999;">
+        <th><input type="checkbox"></th>
+        <th>分类ID</th>
+        <th>分类名称</th>
+        <th>分类描述</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>1</td>
+        <td>手机数码</td>
+        <td>手机数码类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+        <div>张三算数所所所所所</div>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>2</td>
+        <td>电脑办公</td>
+        <td>电脑办公类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>3</td>
+        <td>鞋靴箱包</td>
+        <td>鞋靴箱包类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <script>
+        //基本过滤选择器
+        //设置第一行的背景颜色为红色
+        $("tr:first").css("background-color","red")
+
+        //设置最后一行的颜色为蓝色
+        $("tr:last").css("background-color","blue")
+
+        //设置奇数(下标)行颜色为黄色,下标从0开始:odd
+        $("tr:odd").css("background-color","yellow")
+
+        //设置偶数(下标)行颜色为绿色,下标从0开始:even
+        $("tr:even").css("background-color","green")
+        //修改第三行颜色为粉色:
+        $("tr:eq(2)").css("background-color","pink")
+        //修改下标小于2的行数颜色为black
+        $("tr:lt(2)").css("background-color","orange")
+        //修改下标大于2的行数颜色为black
+        $("tr:gt(2)").css("background-color","orange")
+
+        $("tr:not(div)").css("background-color","purple")
+    </script>
+</table>
+
+</body>
+</html>

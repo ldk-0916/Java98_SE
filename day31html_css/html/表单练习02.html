@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单练习</title>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <form action="https://localhost:8080" method="post" align="left"><br>
+                    <h1 align="center">用户注册</h1>
+                    用户名称:<input type="text" name="username" value="默认值"><br>
+                    用户密码:<input type="password" name="password" value="abc"><br>
+                    确认密码:<input type="password" name="password" value="abc"><br>
+                    性别:<input type="radio" name="sex" value="boy">男
+                    <input type="radio" name="sex" value="girl" checked="checked">女<br>
+                    兴趣爱好:<input name="hobby" type="checkbox" checked="checked" value="java"/>Java
+                    <input name="hobby" type="checkbox" checked="checked" value="js"/>JavaScript
+                    <input name="hobby" type="checkbox" checked="checked" value="cpp"/>C++<br>
+                    国籍:<select name="country">
+                        <option value="none" selected="selected">--国籍选择--</option>
+                        <option value="cn">中国</option>
+                        <option value="usa">美国</option>
+                        <option value="jp">小日本</option>
+                    </select>
+                    <br>
+                    自我评价:<textarea name="desc" rows="10" cols="20">我是默认值</textarea><br>
+                    <input type="reset">&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;<input type="submit" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

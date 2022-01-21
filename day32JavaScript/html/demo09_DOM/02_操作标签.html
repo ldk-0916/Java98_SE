@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作标签</title>
+</head>
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li id="sh">上海</li>
+        <li>深圳</li>
+        <li>广州</li>
+    </ul>
+    <button onclick="addCity()">添加城市</button>
+    <button onclick="deleteCity()">删除城市</button>
+    <script>
+        //点击添加按钮的时候,就往城市列表里面添加城市,同理删除...
+        function addCity() {
+            //创建标签createElement
+            //添加li标签
+            let el = document.createElement("li");
+            //添加标签体文本内容 innerText
+            el.innerText="苏州"
+            //设置li标签id属性 setAttribute
+            el.setAttribute("id","sz")
+            //将新创建的li标签添加到city
+            document.getElementById("city").appendChild(el)
+        }
+        function deleteCity() {
+            document.getElementById("sh").remove()
+        }
+    </script>
+</body>
+</html>

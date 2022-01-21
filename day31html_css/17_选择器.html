@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style type="text/css" rel="stylesheet">
+        /*通用选择器*/
+        *{
+            color: red;
+        }
+        /*标签选择器*/
+        span{
+            color: blue;
+        }
+        /*id选择器*/
+        #d1{
+            color: green;
+        }
+        /*类选择器*/
+        .c1{
+            color: aqua;
+        }
+        /*选择器优先级 id > 类 > 标签 > 通用*/
+    </style>
+</head>
+<body>
+    <div id="d1" class="c1">你好程序猿</div>
+    <div class="c1">你好程序猿</div>
+    <div class="c1">你好程序猿</div>
+    <span>你好无疫烦</span>
+    <span>你好无疫烦</span>
+    <span>你好无疫烦</span>
+</body>
+</html>

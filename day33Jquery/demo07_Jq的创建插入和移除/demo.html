@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <ul id="city">
+        <li id="bj">北京</li>
+        <li id="sh">上海</li>
+        <li id="sz">深圳</li>
+        <li id="gz">广州</li>
+    </ul>
+    <input type="button" value="添加" onclick="addCity()"><br>
+    <input type="button" value="删除" onclick="removeCity()"><br>
+    <input type="button" value="清空城市列表" onclick="removeAllCity()">
+    <script>
+        //点击添加按钮,添加一个"苏州"
+        //创建苏州标签,将创建出来得标签添加到城市列表中
+        //append,父标签将创建出来的标签添加到最后面
+        function addCity() {
+            // $("#city").append($("<li id='sz'>苏州</li>"))
+
+            // appendTo
+            // $("<li id='sz'>苏州</li>").appendTo($("#city"))
+
+            //prepend()方法:父标签将子标签添加到最前面
+           // $("#city").prepend("<li id='sz'>南京</li>")
+
+            //prependTo():添加到父元素的内部最前面
+            // $("<li id='sz'>南京</li>").prependTo($("#city"))
+
+            //before():在某个标签之前添加
+            // $("#sh").before("<li id='sz'>南京</li>")
+            //after():在某个标签之后添加
+            $("#sh").after("<li id='sz'>南京</li>")
+
+        }
+
+        function removeCity(){
+            //删除gz
+            $("#gz").remove()
+        }
+
+        function removeAllCity() {
+            // empty()清空
+            $("#city").empty()
+        }
+    </script>
+</body>
+</html>

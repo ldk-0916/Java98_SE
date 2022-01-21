@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+    <!--
+        表格标签:table
+            1.border属性:表格的边框
+            2.cellspacing属性:单元格之间的间距
+            3.width属性:表格的宽度
+            4.cellspadding属性:表格单元格中的内容,距离单元格的边框距离
+            5.align属性:表格水平对齐方式(left center right)
+            6.bgcolor:表格的1背景颜色
+
+         表格标签中必须有行(tr),行里面必须有单元格(td)
+                tr标签的属性:
+                    align属性:该行内容的水平对齐方式
+                    bgcolor:该行的背景颜色
+
+                td标签的属性:首先单元格要有内容
+                      align属性:该单元格内容的水平对齐方式
+                      bgcolor属性:该单元格的背景颜色
+                      rowspan属性:跨行合并单元格,需要跨几行则rowspan取值就为几
+                      colspan:跨列合并单元格，需要跨几列则colspan的取值就为几
+
+                 caption标签:表格的标题
+    -->
+    <table border="10px" cellspacing="0" width="300" cellpadding="30px" align="center" bgcolor="red">
+        <caption>学生信息表</caption>
+        <tr align="center" bgcolor="blue">
+            <td colspan="3">10</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td rowspan="2">22</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>25</td>
+
+            <td>26</td>
+        </tr>
+    </table>
+</body>
+</html>

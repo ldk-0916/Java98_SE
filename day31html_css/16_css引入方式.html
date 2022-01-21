@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css引入方式</title>
+    <style type="text/css" rel="stylesheet">
+        /*外部加载的一个样式表*/
+        div{
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<!--
+    css引入方式:三种
+        1.行内样式:就是在要修改样式的那个标签上面,添加style属性编写css样式(嵌套到html代码里面)
+        优点:直观 缺点:无法复用
+        2.内部样式:在当前html文档内部,编写一个style标签(建议放在head标签里),在style标签中,编写css代码
+        优点:在当前页面实现复用  缺点:不够直观
+        3.外部样式:在当前项目的css文件家中,编写一个css扩展名的文件,然后再那个html中需要这个样式,通过link标签引入就行
+        最重要:开发中常用
+
+        优先级:行内最高,其他两个分先后顺序
+-->
+    <div>同一个世界,同一个梦想!</div>
+
+</body>
+</html>

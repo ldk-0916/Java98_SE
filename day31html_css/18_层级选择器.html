@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+    <style type="text/css" rel="stylesheet">
+        #d1 .c1{
+            /*父类是d1标签, 子类c1标签*/
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        在现有的页面上,设置第一个'你好无疫烦'颜色为红色
+    -->
+    <div id="d1">
+        <div class="c1">你好无疫烦</div>
+        <div>你好无疫烦</div>
+    </div>
+
+    <div id="d2">
+        <div class="c1">你好无疫烦</div>
+        <div>你好无疫烦</div>
+    </div>
+</body>
+</html>

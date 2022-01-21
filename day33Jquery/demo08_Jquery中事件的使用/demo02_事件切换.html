@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件切换</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" id="btn">
+    <script>
+        //当鼠标移入的时候,输入框颜色变为红色,移出变为蓝色
+        //链式写法
+      /*  $("#btn").mouseover(function () {
+            $("#btn").css("background-color","red")
+        }).mouseout(function () {
+            $("#btn").css("background-color","blue")
+        })*/
+
+        //hover()方法:绑定鼠标移入移出事件
+        $("#btn").hover(function () {
+            $("#btn").css("background-color","red")
+            console.log("鼠标移入了...")
+        },function () {
+            $("#btn").css("background-color","blue")
+            console.log("鼠标移出了...")
+        })
+    </script>
+</body>
+</html>

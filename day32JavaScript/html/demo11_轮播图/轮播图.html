@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <img src="../../image/banner_1.jpg" id="lb"
+        onmouseover="stoplb()" onmouseout="startlb()">
+    </div>
+    <script>
+        var img = ["../../image/banner_1.jpg","../../image/banner_2.jpg","../../image/banner_3.jpg"];
+        // 实现每过3秒中切换一张图片的效果，一共3张图片，当显示到最后1张的时候，再次显示第1张。
+        var i = 0;
+        var id;
+        function startlb() {
+                id=setInterval(function () {
+                    i++;
+                    if (i == 3){
+                        i = 0
+                    }
+                    //切换图片
+                    document.getElementById("lb").setAttribute("src",img[i])
+                },3000)
+        }
+        //当加载页面的时候开始轮播
+        startlb()
+        //鼠标悬停在上面的时候,让他停止轮播
+        function stoplb() {
+            //
+            clearInterval(id)
+        }
+    </script>
+</body>
+</html>

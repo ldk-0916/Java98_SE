@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jq动画</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <img id="mm" src="../img/mm.jpg" width="500px" height="500px">
+    <br>
+    <input type="button" onclick="showImg()" value="显示">
+    <input type="button" onclick="hideImg()" value="隐藏">
+    <input type="button" onclick="toggleImg()" value="切换">
+    <script>
+        //显示图片
+            function showImg() {
+                //jquery对象.show(动画执行的速度,动画执行完毕的瞬间可调用的函数)
+                /*$("img").show(3000,function () {
+                    alert("显示结束了...")
+                })*/
+
+                //Jquery对象:sildeDown(动画执行的速度,动画之星完毕的瞬间...)向下显示
+                 //$("img").slideDown(2000);
+
+                //fadeIn(....)
+                //由淡变亮
+                $("img").fadeIn(2000)
+            }
+
+            //隐藏
+            function hideImg() {
+                /*$("img").hide(2000,function () {
+                    alert("隐藏完了...")
+                })*/
+                //向上隐藏
+                //$("img").slideUp(2000)
+                //由亮变淡
+                $("img").fadeOut(2000)
+            }
+
+            //切换
+        function toggleImg() {
+            // $("img").toggle(2000)
+            //上下切换
+            // $("img").slideToggle(2000)
+            $("img").fadeToggle(2000)
+        }
+    </script>
+</body>
+</html>

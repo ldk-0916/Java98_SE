@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*css的类选择器*/
+        .redStyle{
+            background-color: red;
+            width: 600px;
+            height: 60px;
+        }
+
+        .blueStyle{
+            background-color: blue;
+            width: 800px;
+            height: 80px;
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input id="ipt" type="text" onmouseover="fn1()" onmouseout="fn2()">
+    <script type="text/javascript">
+        //鼠标移入到输入框的时候颜色变成红色,移出的时候变成蓝色
+        function fn1() {
+            //移入事件使用css样式标签设置标签的颜色,无法复用,编写麻烦
+            // $("#ipt").css("background-color","red")
+            $("#ipt").addClass("redStyle")
+            $("#ipt").removeClass("blueStyle")
+        }
+
+        function fn2(){
+            //移出后输入框颜色变为蓝色
+            $("#ipt").addClass("blueStyle")
+            $("#ipt").removeClass("redStyle")
+        }
+    </script>
+</body>
+</html>

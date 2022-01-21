@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //需求:当用户点击校验按钮,获取输出框的内容,验证内容是否合法
+        //验证的规则:必须是由字母,数字下划线组成,长度5-12位
+        function checkedFun() {
+                // var reg = /^[a-z A-Z 0-9 _]{5,12}$/
+            var reg = /^\w{5,12}$/;//校验规则
+            //首先获取标签对象
+            var el = document.getElementById("username");
+            var usernameText = el.value;//获取标体签内容
+            console.log(usernameText)
+            if (reg.test(usernameText)){
+                alert("用户名合法")
+            }else{
+                alert("用户名非法")
+            }
+        }
+    </script>
+    用户名:<input type="text" id="username" value="zsf"/>
+          <button onclick="checkedFun()">校验</button>
+</body>
+</html>

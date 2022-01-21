@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+        表单是由表单标签和表单项组成的:
+            form表单就是表单标签:决定了往哪个服务器路径提交数据.,采用什么方式提交数据采用什么数据类型(格式)提交数据
+                    1.action:提交路径
+                    2.method:提交方式(默认是get方式)
+                    get和post区别:
+                        1. 携带数据的位置:get是在地址栏后面携带的，post是在http协议的请求体中携带的
+                        2. 携带数据的类型:get只能携带字符串不能携带文件，post可以携带任意类型的数据，所以如果是文件上传那么只能选择使用post方式
+                        3. 携带数据的大小:get携带数据的大小一般不超过4kb,post携带数据的大小是没有限制的(但是一般服务器都会做限制)
+                        4. 安全性:post比get更安全
+               3.enctype属性:数据类型(了解)
+                 表单项目:
+                    真真实实的展现在我们眼前的那些组件(输入框,单选框,下拉框,多选框,文件组件上传等...)
+                        1.输入项:input
+                            type属性,类型是由属性（type）定义的
+                                1. text(默认类型) 文本框
+                                2. password  密码框
+                                3. radio 单选框   只有当name属性相同的单选框，才是同一组单选框才能够实现单选效果
+                                4. checkbox 复选框   同一组多选框，也应该具备相同的name属性
+                                5. file 文件选择框
+                                6. date 日期选择框
+                                7. hidden 隐藏域：向服务器提交数据，但是不在页面上展示出来
+                                8. submit 提交按钮：内置提交表单的功能
+                                9. button 普通按钮：不内置任何功能，我们需要在学习js之后再给他绑定点击事件
+                                10. reset重置按钮：内置重置表单的功能
+                                &nbsp:空格
+
+                             value属性:
+                                对于按钮而言就是按钮上的数字
+                                对于文本框,密码框,日期选择框..value属性就是输入或者选择的内容
+                             ckecked:默认选中的
+                             name属性:只有当一个表单中有name属性的时候,他的数据才会被提交给服务器
+
+                            表单数据有没有提交给服务器的三种情况
+                             1.表单项有没有name值
+                             2.单选,复选(下拉列表中option标签) 都需要添加value属性,以便发送给服务器
+                             3.表单性不在form标签中
+
+                           下拉框;select,里面的每一个选项,都是一个option标签
+                           name属性是写在select标签中,value属性是写在option标签中
+                           selected属性,就是下拉框默认选中的
+
+                           文本域:textarea
+                           rows:显示的行数
+                           cols:显示的列数
+
+                         其他属性:
+                            * readonly属性:是否只读,可以让用户不修改这个输入框的值,就使用value属性设置默认值
+                            * disabled属性: 是否可用,如果某个输入框有disabled那么它的数据不能提交到服务器通常是使用在有的页面中，让一些按钮不能点击
+                            * placeholder属性: 输入框中的提示信息
+                            * 单选和多选框也可以设置默认选中，通过checked属性
+                            * option标签通过selected属性设置默认选中
+-->
+
+    <form action="http://www.baidu.com" method="post" enctype="application/x-www-form-urlencoded">
+        用户名<input type="text" name="username"><br>
+        密&nbsp&nbsp 码<input type="password" name="pwd"><br>
+        性&nbsp&nbsp 别<input type="radio" name="gender" value="male" >男
+        <input type="radio" name="gender" value="female" checked>女<br>
+        兴趣爱好<input type="checkbox" name="hobby" value="basketball">篮球
+        <input type="checkbox" name="hobby" value="football">足球
+        <input type="checkbox" name="hobby" value="movie">看电影
+        <input type="checkbox" name="hobby" value="qdm">敲代码<br>
+        生日<input type="date" name="birthday"><br>
+        上传头像<input type="file" name="icon"><br>
+        籍贯
+            <select name="jiguan">
+                <option value="sz">苏州</option>
+                <option value="sh">上海</option>
+                <option value="南京">南京</option>
+            </select><br>
+        个人简介<br>
+        <textarea name="info" rows="10" cols="20"></textarea><br>
+        <input type="submit" >
+        <input type="button" value="按钮">
+        <input type="reset">
+
+    </form>
+
+</body>
+</html>

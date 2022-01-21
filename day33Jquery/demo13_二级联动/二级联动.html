@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级联动</title>
+</head>
+<body>
+    <select id="provinceSelect">
+        <option value="0">请选择省份</option>
+        <option value="1">江苏省</option>
+        <option value="2">安徽省</option>
+        <option value="3">山东省</option>
+    </select>
+    <select id="citySelect">
+        <option>请选择城市</option>
+    </select>
+    <script>
+        var city= [[],
+            ["南京","苏州","常州","无锡","南通"],
+            ["合肥","芜湖","宿州","淮北","滁州"],
+            ["青岛","菏泽","济南","烟台","泰安"]
+        ]
+        //给省份添加一个onchange事件
+        let el = document.getElementById("provinceSelect");
+       el.onchange = function () {
+            //根据省份的的数据,获取当前城市的数据
+           var cityValue = el.value;
+           //获取当前省份的组
+           var items = city[cityValue];
+           document.getElementById("citySelect").innerHTML= "<option>请选择城市</option>";
+           for (var i = 0; i < items.length; i++) {
+               //获取option标签
+               var op = document.createElement("option");
+               op.innerHTML=items[i]
+               document.getElementById("citySelect").appendChild(op)
+           }
+       }
+    </script>
+</body>
+</html>

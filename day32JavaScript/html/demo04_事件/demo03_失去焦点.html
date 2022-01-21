@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>失去焦点</title>
+    <script type="text/javascript">
+        //失去焦点事件
+        /*function onblueFun(){
+            console.log("失去焦点事件....")
+        }
+*/
+        //动态失去焦点事件
+        window.onload = function () {
+            //获取标签对象
+            let pwdObject = document.getElementById("pwd");
+            // alert(pwdObject)
+            pwdObject.onblur = function () {
+                console.log("动态注册/获取失去焦点事件")
+            }
+        }
+    </script>
+</head>
+<body>
+    姓名:<input type="text" onblur="onblueFun()"><br/>
+    密码:<input type="text" id="pwd">
+</body>
+</html>

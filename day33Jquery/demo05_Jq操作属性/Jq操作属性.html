@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" name="username" value="bb"><br>
+    <script>
+        //设置输入框的name属性为nickname
+        // alert($("input").attr("value","nickname"))
+         $("input").prop("value","zs")
+        //1. attr方法可以操作标签的一切属性,而prop方法只能操作标签内置有的属性
+        //2. 如果属性是boolean类型的，那么我们使用prop操作
+    </script>
+</body>
+</html>

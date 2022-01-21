@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击事件</title>
+    <script type="text/javascript">
+        function fun1(){
+            alert("静态注册/获取onclick事件")
+        }
+        //动态注册(获取)Onclick事件,
+        window.onload = function () {
+            //通过getElementById获取标签对象
+            var btns = document.getElementById("btn01");
+            alert(btns)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">按钮1</button>
+    <button id="btn01">按钮2</button>
+</body>
+</html>

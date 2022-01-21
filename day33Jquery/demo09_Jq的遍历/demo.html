@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery的遍历</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <ul>
+        <li>北京</li>
+        <li>上海</li>
+        <li>深圳</li>
+        <li>广州</li>
+    </ul>
+    <script>
+        var arr = [1,2,"aa","zs",3,4,5]
+        //js遍历
+        /*for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i])
+        }*/
+
+        //js遍历出每一个li标签,获取里面的内容
+      /*  var element = document.getElementsByTagName("li");
+        for (var i = 0; i < element.length; i++) {
+            //我们遍历的是li标签,里面的内容.innerHTML
+            console.log(element[i].innerHTML)
+        }*/
+
+       //使用jquery方式遍历,获取每一个li标签的内容
+        // .each():遍历出每一个jquery对象
+        /*$("li").each(function (index,element) {
+            console.log(index+":"+element.innerHTML)
+        })*/
+
+        //for of语句遍历
+        /*for (element of $("li")){
+            console.log(element.innerHTML)
+        }*/
+
+        for (element of arr){
+            console.log(element)
+        }
+        // foreach(变量:要遍历的对象)
+    </script>
+</body>
+</html>

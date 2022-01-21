@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象的三种弹窗</title>
+</head>
+<body>
+    <script>
+        //三种弹框:alert()警告框,confirm()确认框,返回值为boolean类型,prompt()输入框,该方法返回值就是输入框内容
+        // alert("你好,无疫烦")
+        // let flag = confirm("你准备好了吗?");
+        // console.log(flag)
+        let age = prompt("请输入你的年龄:");
+        if (age >= 18){
+            alert("你可以访问...")
+        }else{
+            alert("未成年,禁止访问,请将它分享给你的成年朋友...")
+        }
+    </script>
+</body>
+</html>

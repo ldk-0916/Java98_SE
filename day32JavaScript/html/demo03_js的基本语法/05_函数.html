@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+            格式:类似于java中的方法,用于封装一些可重复的代码块
+                function 函数名(形参列表){
+                    函数体
+                    return 返回值;
+                }
+         */
+        function total(a,b){
+            console.log("argument数组中的长度"+arguments.length)//看参数的个数
+            return a+b
+        }
+        function total(a,b,c) {
+            console.log("argument数组中的长度" + arguments.length)
+            return a + b + c
+        }
+
+        function total(a,b,c,d){
+            console.log("argument数组中的长度"+arguments.length)
+            return a+b+c+d
+        }
+        var sum = total(2,3,4,6,7,8,9);
+        alert(sum)
+        console.log(sum)
+        //js中函数方法定义的时候的参数个数和方法调用时的参数个数可以不一致
+        //原因就是js函数中内置了一个argument数组变量,这个数组可以存放你传入的所有参数
+        //js没有方法重载,同名方法定义后会覆盖先定义的
+
+        //匿名函数,类似于Java中的函数式接口
+        var s = function (a,b) {
+            console.log(arguments)
+            return a + b
+        }
+        console.log(s(1,2))
+    </script>
+</body>
+</html>

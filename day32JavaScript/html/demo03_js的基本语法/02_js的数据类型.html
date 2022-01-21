@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的数据类型</title>
+</head>
+<body>
+    <script>
+        //它的类型是由值;来决定的..
+        var i = 10;//number
+        i = "hello"//字符串类型
+        i = true//boolean类型
+        i = new Date()//对象型
+        var a;//未定义类型
+        //用来判断变量是什么类型的
+        console.log(typeof i)
+        //数据类型之间的转换
+        var j = 10;
+        //将number类型的转换为字符串类型,可以在j后面加一个"",或者toString方法
+        console.log(typeof j.toString())
+        console.log(typeof (j+""))
+        var str = "3.1415"
+        //将string转换为number类型,转换成有一个整数parseInt
+        console.log(typeof parseInt(str))
+        console.log(typeof parseFloat(str))
+
+        //字符串转成boolean类型:new Boolean(字符串/数字):如果是空字符串或者0表示false,非空字符串或者非0表示true
+        console.log(new Boolean(str))
+        console.log(new Boolean(""))
+        console.log(new Boolean(0))
+    </script>
+</body>
+</html>

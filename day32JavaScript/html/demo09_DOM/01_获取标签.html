@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取标签的方法</title>
+</head>
+<body>
+    <div id="d1" name="n1">你好,无疫烦</div>
+    <div class="c1" name="c1">你好,盘微博</div>
+    <div class="c1" name="c1">你好,李运第</div>
+    <span name="n1">你好,罗智翔</span>
+    <script>
+        //1.根据id获取标签
+        // console.log(document.getElementById("d1"))
+        //2.根据name标签名获取
+        console.log(document.getElementsByName("c1"));
+        //3.根据标签名获取
+        let el = document.getElementsByTagName("div");
+        console.log(el)
+        let name = document.getElementsByClassName("c1");
+        console.log(name)
+        //4.获取单个标签
+        let e2 = document.querySelector("#d1");
+        console.log(e2)
+
+        //获取多个标签
+        let of = document.querySelectorAll("span");
+        console.log(of)
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作标签体</title>
+</head>
+<body>
+    <div id="city"><h2>苏州</h2></div>
+    <script>
+        //获取id为city的标签体内容
+        let el = document.getElementById("city").innerHTML;
+        // alert(el)
+        //设置标签体内容:设置id为city的内容
+        document.getElementById("city").innerHTML="<h3>江苏</h3>"
+    </script>
+</body>
+</html>

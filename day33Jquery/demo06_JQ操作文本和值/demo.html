@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" id="ipt" value="张三"/>
+    <div id="city"><h1>苏州</h1></div>
+    <script>
+        //获取输入框的value值
+        //val()方法:不传参数就是获取value值,传参数就是给value属性设置值
+        // console.log($("#ipt").val())
+        // console.log($("#ipt").val("赵八"))
+
+        //获取文本内容
+        // console.log($("#city").text())
+        // console.log($("#city").text("<h1>南京</h1>").text())
+
+        //html()
+        console.log($("#ipt").html("<h1>上海</h1>").text())
+    </script>
+</body>
+</html>

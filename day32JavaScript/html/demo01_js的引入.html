@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的引入的方式</title>
+</head>
+<body>
+    <!--
+        js引入的方式
+            1.内部引入(内嵌式):在当前html页面中添加<script>标签(放在html的最后面),在这个标签中写js代码
+            2.外部引入(外联式):创建一个js文件夹,然后再js文件夹中创建js文件,哪个html需要,就用<script>标签的src属性引入即可
+    -->
+  <!--  <script>
+        //弹窗警告,alert关键字类似于java中的sout...输出
+        alert("hello world...")
+    </script>-->
+        <!--外部引入-->
+        <script src="../js/demo.js"></script>
+        <script>
+            alert("你好")
+        </script>
+</body>
+</html>

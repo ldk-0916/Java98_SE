@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>参数个数</title>
+    <script type="text/javascript">
+        function fun(a){
+            console.log(arguments.length);//查看参数个数
+            console.log(arguments[0]);//通过下标查看元素
+            console.log(arguments[1])
+            console.log(arguments[2])
+        }
+        //编写一个函数,计算所有参数相加的和并给他返回
+        function sum(n1,n2){
+            var result = 0;
+            //对数组进行遍历
+            for (var i = 0; i < arguments.length; i++) {
+                if (typeof (arguments[i]) == "number"){
+                    result += arguments[i]//result = result + 1 =1+2+3+5+6
+
+                }
+            }
+            return result;
+        }
+        alert(sum(1,2,3,"qwer",5,6))
+        console.log(sum(1,2,3,"qwer",5,6));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中的日期</title>
+</head>
+<body>
+    <script>
+        /*
+            * 创建当前日期：`var date = new Date()`
+            * 创建指定日期：`var date = new Date(年, 月, 日)`
+              注意：月从0开始，0表示1月
+            * 创建指定日期时间：`var date = new Date(年, 月, 日, 时, 分, 秒)`
+              注意：月从0开始，0表示1月
+         */
+        //js获取日期对象
+        var date = new Date(2021,11,7,9,41,35)
+       // alert(date.toLocaleDateString())//获取当前日期
+
+        //时间戳:格林威治时间1970,1月1日0时0分0秒,到某一时刻的毫秒数
+        //获取一周的某一天
+        alert(date.getDay())
+
+    </script>
+</body>
+</html>

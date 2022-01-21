@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>05-表格增删.html</title>
+</head>
+<script type="text/javascript">
+	function deleteMyRow(object){
+		//删除那一行
+		var tr = object.parentNode.parentNode;
+		tr.parentNode.removeChild(tr)
+	}
+	window.onload = function () {
+		var addUser = document.getElementById("addUser");
+		addUser.onclick = function () {
+			//获取姓名,住址,电话输入框的值
+			var username = document.getElementById("name").value;
+			var userphone = document.getElementById("tel").value;
+			var useraddress = document.getElementById("addr").value;
+			//创建表格的行标签
+			var tr = document.createElement("tr");
+			//创建四个列标签
+			var tdName = document.createElement("td");
+			//添加姓名到td标签
+			tdName.innerHTML = username;
+			tr.appendChild(tdName)
+			//创建电话...
+			var tdPhone = document.createElement("td");
+			tdPhone.innerHTML = userphone;
+			tr.appendChild(tdPhone)
+			//创建住址
+			var tdAddress = document.createElement("td");
+			tdAddress.innerHTML = useraddress;
+			tr.appendChild(tdAddress)
+			//创建删除...
+			var tdDelete = document.createElement("td");
+			//创建a标签
+			var a = document.createElement("a");
+			a.href = "#";
+			a.innerHTML = "删除";
+			//给删除添加点击事件
+			a.onclick = function () {
+				deleteMyRow(this);
+			};
+			tdDelete.appendChild(a);
+			tr.appendChild(tdDelete)
+			//通过表格标签
+			var userTable = document.getElementById("usertable");
+			userTable.appendChild(tr)
+		}
+
+	}
+</script>
+<body>
+	<center>
+		<br>
+		<br> 添加用户:<br>
+		<br> 姓名: <input type="text" name="name" id="name" />&nbsp;&nbsp; 电话: <input type="text"
+			name="tel" id="tel" />&nbsp;&nbsp; 住址: <input type="text" name="addr" id="addr" /><br>
+		<br>
+		<button id="addUser">提交</button>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<br>
+		<table id="usertable" border="1" cellpadding="5" cellspacing="0">
+			<tr>
+				<th>姓名</th>
+				<th>电话</th>
+				<th>住址</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>110</td>
+				<td>上海</td>
+				<td><a href="#" onclick="deleteMyRow(this);">删除</a>
+				</td>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>

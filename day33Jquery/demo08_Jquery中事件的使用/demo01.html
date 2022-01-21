@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery操作事件</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <script>
+        //目标: 给按钮绑定点击事件
+        //绑定事件的方式: 1. 普通函数方式  2. js的匿名函数方式  3. jquery的匿名函数方式   4. jquery的on方法绑定事件
+        //Jquery的匿名函数绑定
+        /*$("#btn").click(function () {
+                alert("匿名函数点击事件触发了...")
+        })*/
+        //Jquery的On方式绑定
+        /*$("#btn").on("click",function () {
+            //a
+            alert("on方式函数触发了..")
+        })*/
+
+        $("#btn").on("mouseover",function () {
+            console.log("鼠标移入了...")
+        })
+
+        $("#btn").on("mouseout",function () {
+            console.log("鼠标移出了...")
+        })
+
+        //Jquery的off()方法可以解绑事件,只能解绑Jquery绑定的事件
+        //如果传入参数,表示解绑某种事件;不传参数就是解绑所有事件
+        $("#btn").off()
+    </script>
+</body>
+</html>
